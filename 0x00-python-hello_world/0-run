@@ -1,3 +1,4 @@
-#!/bin/bash
-python $PYFILE
+#!/usr/bin/python3
+import main
+main
 
