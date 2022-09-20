@@ -7,9 +7,7 @@ def fizzbuzz():
         elif i % 3 == 0:
             result += 'Fizz '
         elif i % 5 == 0:
-            result += 'Buzz'
-            if i != 100:
-                result += ' '
+            result += 'Buzz '
         else:
             result += "{:d} ".format(i)
 
