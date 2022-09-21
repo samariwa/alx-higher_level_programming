@@ -6,8 +6,7 @@ date = datetime(2015, 10, 19)
 
 
 def main():
-    sys.stderr.write(f'and that piece of art is useful -\ 
-    Dora Korpar, {date: %Y-%m-%d}\n')
+    sys.stderr.write('and that piece of art is useful - Dora Korpar, {:%Y-%m-%d}\n'.format(date))
     exit(1)
   
 
