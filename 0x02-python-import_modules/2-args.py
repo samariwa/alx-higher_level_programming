@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from sys import argv
 
+
 def arguments():
     if len(argv) == 1:
         print("0 arguments.")
