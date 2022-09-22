@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import add_0
 
 
 def add_result():
@@ -9,4 +8,6 @@ def add_result():
     print("{} + {} = {}".format(a, b, add_0.add(a, b)))
 
 
-add_result()
+if __name__ == "__main__":
+    import add_0
+    add_result()
