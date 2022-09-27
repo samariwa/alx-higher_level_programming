@@ -7,6 +7,10 @@ def multiple_returns(sentence):
     for i in range(len(sentence)):
         count += 1
     result = ()
-    result = (count, sentence[0],)
+    if count == 0:
+        letter = 'None'
+    else:
+        letter = sentence[0]
+    result = (count, letter,)
 
     return(result)
