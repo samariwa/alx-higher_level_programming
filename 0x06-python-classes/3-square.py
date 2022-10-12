@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+  
 
 class Square:
     def __init__(self, size=0):
@@ -9,3 +9,6 @@ class Square:
             raise TypeError("size must be an integer")
         else:
             self._size = size
+
+    def area(self):
+        return (self._size * self._size)
