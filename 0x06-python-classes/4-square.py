@@ -12,18 +12,15 @@ class Square:
         else:
             self.__size = size
 
-    """method that gets the area of the square"""
     def area(self):
         """returns the area of the square"""
         return (self.__size ** 2)
 
-    """getter of the size property"""
     @property
     def size(self):
         """returns the size of the square"""
         return (self.__size)
 
-    """setter of the size property"""
     @size.setter
     """setting size with type and value checkers"""
     def size(self, value):
