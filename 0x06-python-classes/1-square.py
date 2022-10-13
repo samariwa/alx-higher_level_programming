@@ -11,7 +11,6 @@ Example:
         'Square' object has no attribute '__size'
 """
 
-
 class Square:
     """a class Square that defines a square
     private instance attribute: size
