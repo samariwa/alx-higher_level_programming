@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ creating class Square """
 
+
 class Square:
     """ initialization of the square instance """
     def __init__(self, size=0, position=(0, 0)):
@@ -30,7 +31,10 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """ setting size with type and value checkers """
+        """ setting size with type and value checkers
+        args:
+            value: the size parameter in __init__
+        """
         if value < 0:
             raise ValueError("size must be >= 0")
         elif type(value) is not int:
@@ -45,7 +49,10 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """ setting size with type and value checkers """
+        """ setting size with type and value checkers
+        args:
+            value: the position parameter in __init__
+        """
         for point in value:
             if type(point) is int or point >= 0:
                 self.__position = value
