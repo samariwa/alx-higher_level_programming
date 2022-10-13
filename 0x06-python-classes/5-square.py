@@ -4,6 +4,7 @@
 class Square:
     """constructor of the square class"""
     def __init__(self, size=0):
+        """setting size with type and value checkers"""
         if size < 0:
             raise ValueError("size must be >= 0")
         elif type(size) is not int:
@@ -32,6 +33,7 @@ class Square:
     """setter for the size property"""
     @size.setter
     def size(self, value):
+        """setting size with type and value checkers"""
         if value < 0:
             raise ValueError("size must be >= 0")
         elif type(value) is not int:
