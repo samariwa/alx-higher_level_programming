@@ -3,7 +3,7 @@
 
 
 class Square:
-    """ creates an a clas swith an private attribute size """
+    """ creates an instance with an private attribute size """
     def __init__(self, size):
         """ Initialize the instance """
         self.__size = size
