@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-"""This module entails creation of the square class
-   and initialization of the size priperty in the class
-   constructor
-
-Example: 
-    This module will have a class with private args
+"""a module for a square class with private args
+Example:
+    This module is expected to have a Class with private args
         $ ./1-main.py
         <class '1-square.Square'>
         {'_Square__size': 3}
@@ -13,7 +10,7 @@ Example:
 """
 
 class Square:
-    """constructor of the square class
+    """a class Square that defines a square
        private instance attribute: size
        Instantiation with size
     """
