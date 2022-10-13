@@ -10,17 +10,17 @@ class Square:
         elif type(size) is not int:
             raise TypeError("size must be an integer")
         else:
-            self._size = size
+            self.__size = size
 
     """method that gets are of the square"""
     def area(self):
         """returns the area of the square"""
-        return (self._size ** 2)
+        return (self.__size ** 2)
 
     """method that prints the square area using dimensions provided"""
     def my_print(self):
-        for i in range(self._size):
-            for j in range(self._size):
+        for i in range(self.__size):
+            for j in range(self.__size):
                 print("#", end='')
             print('')
 
@@ -28,7 +28,7 @@ class Square:
     @property
     def size(self):
         """returns the size of the square"""
-        return (self._size)
+        return (self.__size)
 
     """setter for the size property"""
     @size.setter
@@ -39,4 +39,4 @@ class Square:
         elif type(value) is not int:
             raise TypeError("size must be an integer")
         else:
-            self._size = value
+            self.__size = value

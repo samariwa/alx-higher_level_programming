@@ -10,9 +10,9 @@ class Square:
         elif type(size) is not int:
             raise TypeError("size must be an integer")
         else:
-            self._size = size
+            self.__size = size
 
     """method that gets the area of the given square"""
     def area(self):
         """returns the area of the square"""
-        return (self._size * self._size)
+        return (self.__size * self._size)

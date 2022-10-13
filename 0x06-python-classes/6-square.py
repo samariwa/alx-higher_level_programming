@@ -10,24 +10,24 @@ class Square:
         elif type(size) is not int:
             raise TypeError("size must be an integer")
         else:
-            self._size = size
+            self.__size = size
 
     """gets the area of the square using size provided"""
     def area(self):
 	"""returns the area of the square"""
-        return (self._size ** 2)
+        return (self.__size ** 2)
 
     """prints a square area using the size provided"""
     def my_print(self):
-        for i in range(self._size):
-            for j in range(self._size):
+        for i in range(self.__size):
+            for j in range(self.__size):
                 print("#", end='')
             print('')
 
     """getter of the size property"""
     @property
     def size(self):
-        return (self._size)
+        return (self.__size)
 
     """setter of the size property"""
     @size.setter
@@ -38,13 +38,13 @@ class Square:
         elif type(value) is not int:
             raise TypeError("size must be an integer")
         else:
-            self._size = value
+            self.__size = value
 
     """"getter of the position property"""
     @property
     def position(self):
         """returns the position of the square"""
-        return (self._position)
+        return (self.__position)
 
     """setter of the position property"""
     @position.setter
@@ -52,6 +52,6 @@ class Square:
         """setting size with type and value checkers"""
         for point in value:
             if type(point) is int or point >= 0:
-                self._position = value
+                self.__position = value
             else:
                 raise TypeError("position must be a tuple of 2 positive integers")

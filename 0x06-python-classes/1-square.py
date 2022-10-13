@@ -21,6 +21,6 @@ class Square:
 	"""initialization of the square object
 
         Args:
-            _size (int): length of the square which is a private attribute
+            __size (int): length of the square which is a private attribute
         """
-        self._size = size
+        self.__size = size
