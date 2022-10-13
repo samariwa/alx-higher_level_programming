@@ -3,7 +3,7 @@
 
 
 class Square:
-
-
     """creates an empty class"""
+
+
     pass
