@@ -12,24 +12,22 @@ class Square:
         else:
             self.__size = size
 
-    """gets the area of the square using size provided"""
     def area(self):
 	"""returns the area of the square"""
         return (self.__size ** 2)
 
-    """prints a square area using the size provided"""
     def my_print(self):
+        """ prints the square based on the size """
         for i in range(self.__size):
             for j in range(self.__size):
                 print("#", end='')
             print('')
 
-    """getter of the size property"""
     @property
     def size(self):
+        """ getter of the size property """
         return (self.__size)
 
-    """setter of the size property"""
     @size.setter
     def size(self, value):
         """setting size with type and value checkers"""
@@ -40,13 +38,11 @@ class Square:
         else:
             self.__size = value
 
-    """"getter of the position property"""
     @property
     def position(self):
         """returns the position of the square"""
         return (self.__position)
 
-    """setter of the position property"""
     @position.setter
     def position(self, value):
         """setting size with type and value checkers"""
