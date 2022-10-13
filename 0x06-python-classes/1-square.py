@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""creation of the square class"""
+"""This modules entails creation of the square class
+   and initialization of the size priperty in the class
+   constructor
+"""
 
 class Square:
     """constructor of the square class"""
