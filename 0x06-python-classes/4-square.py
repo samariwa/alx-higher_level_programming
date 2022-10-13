@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" creation of the square class """  
+""" creation of the class Square """  
 
 
 class Square:
-    """ constructor of the square class """
+    """ constructor of the class with a private attribute size """
     def __init__(self, size=0):
         """ initialization of the private attribute size based on 
         input checker
@@ -26,10 +26,10 @@ class Square:
 
     @size.setter
     def size(self, value):
-    """ setting size with type and value checkers
-    args:
-        value: the size parameter in __init__
-    """
+        """ setting size with type and value checkers
+        args:
+            value: the size parameter in __init__
+        """
         if value < 0:
             raise ValueError("size must be >= 0")
         elif type(value) is not int:
