@@ -3,9 +3,11 @@
 
 
 class Square:
-    """ initialization of the square instance """
+    """ creates an a class with a private attribute size """
     def __init__(self, size=0, position=(0, 0)):
-        """ setting size and position with type and value checkers """
+        """ Initialize the instance and enforce the type
+        of size to be a positive integer
+        """
         if size < 0:
             raise ValueError("size must be >= 0")
         elif type(size) is not int:
