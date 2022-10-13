@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" Square class creation """
+""" creating class Square """
 
 class Square:
-    """ Constructor of the square class """
+    """ initialization of the square instance """
     def __init__(self, size=0, position=(0, 0)):
         """ setting size and position with type and value checkers """
         if size < 0:
