@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" creation of the class Square """  
+""" creation of the class Square """
 
 
 class Square:
     """ constructor of the class with a private attribute size """
     def __init__(self, size=0):
-        """ initialization of the private attribute size based on 
+        """ initialization of the private attribute size based on
         input checker
         """
         if size < 0:
