@@ -1,23 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-"""a module for a square class with private args that can calculate area
+""" a module for a square class with private args that can calculate area
 
 Example:
     This module is expected to have a Class with private args
     The said file imports it as follows:
     Square = __import__('3-square').Square
-    The outcome expected looks like this
-    $ ./6-main.py | tr " " "_" | cat -e
-    ###$
-    ###$
-    ###$
-    --$
-    _###$
-    _###$
-    _###$
-    --$
-    ___###$
-    ___###$
     """
 
 
@@ -27,6 +15,13 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """ Initialize the instance and enforce the type
         of size to be a positive integer
+
+        Args:
+            __size (int): length or width should be equal and private
+            __position (int, int): an tuple of 2 positive integers
+        Note:
+            size is expected to be an integer >= 0
+            position must be a tuple of two positive integers
         """
         if size < 0:
             raise ValueError("size must be >= 0")
