@@ -1,9 +1,29 @@
 #!/usr/bin/python3
-""" creating class Square """
+# -*- coding: utf-8 -*-
+
+"""a module for a square class with private args that can calculate area
+Example:
+    This module is expected to have a Class with private args
+    The said file imports it as follows:
+    Square = __import__('3-square').Square
+    The outcome expected looks like this
+    $ ./6-main.py | tr " " "_" | cat -e
+    ###$
+    ###$
+    ###$
+    --$
+    _###$
+    _###$
+    _###$
+    --$
+    ___###$
+    ___###$
+    """
 
 
 class Square:
     """ creates an a class with a private attribute size """
+
     def __init__(self, size=0, position=(0, 0)):
         """ Initialize the instance and enforce the type
         of size to be a positive integer
@@ -16,8 +36,8 @@ class Square:
             self.__size = size
 
     def area(self):
-	""" returns the area of the square """
-        return (self.__size ** 2)
+        """ returns the area of the square """
+        return (self.__size ** 2)i
 
     def my_print(self):
         """ prints the square based on the size """
@@ -55,8 +75,10 @@ class Square:
         args:
             value: the position parameter in __init__
         """
+
         for point in value:
             if type(point) is int or point >= 0:
                 self.__position = value
             else:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError("position must be a tuple\
+                                 of 2 positive integers")
