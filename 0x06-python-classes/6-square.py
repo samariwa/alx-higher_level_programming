@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-
 """a module for a square class with private args that can calculate area
+
 Example:
     This module is expected to have a Class with private args
     The said file imports it as follows:
@@ -54,6 +54,7 @@ class Square:
     @size.setter
     def size(self, value):
         """ setting size with type and value checkers
+
         args:
             value: the size parameter in __init__
         """
@@ -72,6 +73,7 @@ class Square:
     @position.setter
     def position(self, value):
         """ setting size with type and value checkers
+
         args:
             value: the position parameter in __init__
         """
