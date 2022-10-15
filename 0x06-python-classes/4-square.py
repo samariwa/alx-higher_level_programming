@@ -8,12 +8,7 @@ class Square:
         """ initialization of the private attribute size based on
         input checker
         """
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        elif type(size) is not int:
-            raise TypeError("size must be an integer")
-        else:
-            self.__size = size
+        self.size = size
 
     def area(self):
         """ returns the area of the square """
@@ -30,9 +25,9 @@ class Square:
         args:
             value: the size parameter in __init__
         """
-        if value < 0:
-            raise ValueError("size must be >= 0")
-        elif type(value) is not int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
         else:
             self.__size = value
