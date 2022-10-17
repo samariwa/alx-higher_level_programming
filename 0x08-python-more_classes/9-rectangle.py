@@ -8,7 +8,7 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = '#'
 
-    def __init__(self, width = 0, height = 0):
+    def __init__(self, width=0, height=0):
         """ constructor of the rectanlge class """
         self.width = width
         self.height = height
