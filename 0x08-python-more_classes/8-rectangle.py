@@ -73,7 +73,7 @@ class Rectangle:
             return('')
         for h in range(self.height):
             for w in range(self.width):
-                area += '#'
+                area += Rectangle.print_symbol
             area += '\n'
         return (area)
 
