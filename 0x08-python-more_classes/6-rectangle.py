@@ -4,10 +4,14 @@
 
 class Rectangle:
     """ This is the class for rectangle creation """
+    
+    number_of_instances = 0
+
     def __init__(self, width = 0, height = 0):
         """ constructor of the rectanlge class """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -59,3 +63,7 @@ class Rectangle:
                 area += '#'
             area += '\n'
         return (area)
+
+    def __del__(self):
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
