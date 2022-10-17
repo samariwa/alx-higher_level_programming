@@ -54,6 +54,12 @@ class Rectangle:
             return (rect_1)
         return (rect_2)
 
+    @classmethod
+    def square(cls, size=0):
+        """ class method for rectangle that returns a new rectangle instance\
+        with width and height equal to size """
+        return (Rectangle(size, size))
+
     def area(self):
         """ returns the area of the rectangle """
         return (self.height * self.width)
@@ -78,6 +84,6 @@ class Rectangle:
         return (area)
 
     def __del__(self):
-        """ Deconstructor for Rectangle instances """
+        """ Deconstructor for rectangle instances """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
