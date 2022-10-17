@@ -61,7 +61,7 @@ class Rectangle:
             return('')
         for h in range(self.height):
             for w in range(self.width):
-                area += self.print_symbol
+                area += str(self.print_symbol)
             area += '\n'
         return (area)
 
