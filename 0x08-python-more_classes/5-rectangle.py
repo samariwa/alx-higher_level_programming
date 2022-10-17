@@ -58,7 +58,11 @@ class Rectangle:
             for w in range(self.width):
                 area += '#'
             area += '\n'
-        return (area)	
+        return (area)
+
+    def __repr__(self):
+        """ returns an eval() capable representation of an object """
+        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
 
     def __del__(self):
         print("Bye rectangle...")

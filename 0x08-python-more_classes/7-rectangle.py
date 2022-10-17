@@ -65,6 +65,10 @@ class Rectangle:
             area += '\n'
         return (area)
 
+    def __repr__(self):
+        """ returns an eval() capable representation of an object """
+        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
+
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
