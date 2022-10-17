@@ -1,22 +1,33 @@
 #!/usr/bin/python3
-""" creating class Square """
+# -*- coding: utf-8 -*-
+""" a module for a square class with private args that can calculate area
+
+Example:
+    This module is expected to have a Class with private args
+    The said file imports it as follows:
+    Square = __import__('3-square').Square
+    """
 
 
 class Square:
     """ creates an a class with a private attribute size """
+
     def __init__(self, size=0, position=(0, 0)):
         """ Initialize the instance and enforce the type
         of size to be a positive integer
+
+        Args:
+            __size (int): length or width should be equal and private
+            __position (int, int): an tuple of 2 positive integers
+        Note:
+            size is expected to be an integer >= 0
+            position must be a tuple of two positive integers
         """
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        elif type(size) is not int:
-            raise TypeError("size must be an integer")
-        else:
-            self.__size = size
+        self.position = position
+        self.size = size
 
     def area(self):
-	""" returns the area of the square """
+        """ returns the area of the square """
         return (self.__size ** 2)
 
     def my_print(self):
@@ -34,6 +45,7 @@ class Square:
     @size.setter
     def size(self, value):
         """ setting size with type and value checkers
+
         args:
             value: the size parameter in __init__
         """
@@ -52,11 +64,12 @@ class Square:
     @position.setter
     def position(self, value):
         """ setting size with type and value checkers
+
         args:
             value: the position parameter in __init__
         """
-        for point in value:
-            if type(point) is int or point >= 0:
-                self.__position = value
-            else:
-                raise TypeError("position must be a tuple of 2 positive integers")
+        if ((type(value) is not tuple) or (len(value) != 2)):
+            """ or (x < 0 or x is not int for x in value)):"""
+            raise TypeError("position must be a tuple of 2 integers")
+        else:
+            self.__position = value

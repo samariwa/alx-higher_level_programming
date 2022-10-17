@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""creation of the square class"""  
+"""creation of the square class"""
+
 
 class Square:
     """constructor of the square class"""
@@ -19,10 +20,13 @@ class Square:
 
     """method that prints the square area using dimensions provided"""
     def my_print(self):
-        for i in range(self.__size):
-            for j in range(self.__size):
-                print("#", end='')
-            print('')
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end='')
+                print('')
 
     """getter for the size property"""
     @property
