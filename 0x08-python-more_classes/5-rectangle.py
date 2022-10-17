@@ -59,3 +59,6 @@ class Rectangle:
                 area += '#'
             area += '\n'
         return (area)
+
+    def __del__(self):
+        print("Bye rectangle...")
