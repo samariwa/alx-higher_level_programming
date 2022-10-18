@@ -1,0 +1,39 @@
+The 0-add_integer module
+===================================
+Test for the add integers function
+===================================
+
+This is a function that adds two integers that are provided as input
+The input has to be either integers of floats that  are checked and TypeError
+exceptions are raise in the case that the are not
+
+Single argument
+----------------
+>>> add = __import__('0-add_integer').add_integer
+>>> add(2)
+100
+
+More than one argument provided (int or float)
+-----------------------------------------------
+>>> add(23, 4)
+27
+>>> add(13, 23)
+36
+>>> add(3.0, 7.0)
+10
+>>> add(3.0, 5)
+8
+>>> add(-7, 2)
+-5
+>>> add(3, 0)
+3
+
+Invalid arguments
+------------------
+>>> add('zfg')
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add(2, 's')
+Traceback (most recent call last):
+TypeError: b must be an integer
