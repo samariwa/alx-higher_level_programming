@@ -4,10 +4,15 @@
 
 class Rectangle:
     """ This is the class for rectangle creation """
+
+    number_of_instances = 0
+    print_symbol = '#'
+
     def __init__(self, width=0, height=0):
         """ constructor of the rectanlge class """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -37,6 +42,24 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self._height = value
 
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """ static method of class rectangle that takes in 2 Rectangle\
+        instances and compare which of them is big. Type checks are done """
+        if type(rect_1) is not Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        elif type(rect_2) is not Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() > rect_2.area() or rect_1.area() == rect_2.area():
+            return (rect_1)
+        return (rect_2)
+
+    @classmethod
+    def square(cls, size=0):
+        """ class method for rectangle that returns a new rectangle instance\
+        with width and height equal to size """
+        return (Rectangle(size, size))
+
     def area(self):
         """ returns the area of the rectangle """
         return (self.height * self.width)
@@ -56,10 +79,15 @@ class Rectangle:
             return('')
         for h in range(self.height):
             for w in range(self.width):
-                area += '#'
+                area += str(self.print_symbol)
             area += '\n'
         return (area)
 
     def __repr__(self):
         """ returns an eval() capable representation of an object """
         return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
+
+    def __del__(self):
+        """ Deconstructor for rectangle instances """
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1

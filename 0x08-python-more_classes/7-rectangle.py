@@ -8,7 +8,7 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = '#'
 
-    def __init__(self, width = 0, height = 0):
+    def __init__(self, width=0, height=0):
         """ constructor of the rectanlge class """
         self.width = width
         self.height = height
@@ -53,17 +53,21 @@ class Rectangle:
             return 0
         return ((self.height + self.width) * 2)
 
-    def my_rectangle(self):
+    def __str__(self):
         """ Prints the area of the rectangle using the # symbol\
-        returns an empty string if width or height is 0 """
+         returns an empty string if width or height is 0 """
         area = ''
         if self.width == 0 or self.height == 0:
             return('')
-        for w in range(self.width):
-            for h in range(self.height):
-                area += print_symbol
+        for h in range(self.height):
+            for w in range(self.width):
+                area += str(self.print_symbol)
             area += '\n'
         return (area)
+
+    def __repr__(self):
+        """ returns an eval() capable representation of an object """
+        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
 
     def __del__(self):
         print("Bye rectangle...")
