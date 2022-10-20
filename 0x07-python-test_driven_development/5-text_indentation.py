@@ -8,10 +8,13 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     breakers = ['.', '?', ':']
     new_text = ''
+    count = 0
+    text_list = list(text)
 
-    for character in text:
+    for character in text_list:
         new_text += character
         if character in breakers:
-            new_text += '\n\n'
+            text_list[count + 1] += '\n\n'
+        count += 1
 
     print(new_text, end='')
