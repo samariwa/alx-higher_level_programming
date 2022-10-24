@@ -5,3 +5,6 @@
 class BaseGeometry:
     """ This is the BaseGeometry class. It is the super class of the module """
     pass
+
+    def area(self):
+        raise Exception("area() is not implemented")

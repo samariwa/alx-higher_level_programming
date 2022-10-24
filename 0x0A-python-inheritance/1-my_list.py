@@ -10,7 +10,7 @@ class list:
 
     @property
     def new_list(self):
-       return self.__new_list
+        return self.__new_list
 
     @new_list.setter
     def new_list(self, new_list):
