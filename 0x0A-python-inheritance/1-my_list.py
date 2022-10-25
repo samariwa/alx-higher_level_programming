@@ -40,7 +40,7 @@ class MyList(list):
     """ This is the sub-class that inherits from the list class """
 
     def __init__(self, new_list=[]):
-       """ This is the constructor of the sub class mylist """
+        """ This is the constructor of the sub class mylist """
         list.__init__(self, new_list)
 
     def __str__(self):
