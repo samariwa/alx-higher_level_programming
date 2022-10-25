@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This module contains the list class that has the various list comprehension\
+""" This module contains the list class that has various list comprehension\
 methods. It also has a child class MyList that inherits its attributes """
 
 
@@ -44,5 +44,6 @@ class MyList(list):
         list.__init__(self, new_list)
 
     def __str__(self):
-        """ This method that prints the stringifyed represntation the list and it inherits a super class method """
+        """ This method that prints the stringifyed represntation the list\
+        and it inherits a super class method """
         return super().__str__()
