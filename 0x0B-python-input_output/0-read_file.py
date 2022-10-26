@@ -6,4 +6,4 @@ def read_file(filename=""):
     """ this function opens the provided file and prints its content\
     to stdout """
     with open(filename, mode='r', encoding='UTF8') as fd:
-        print(fd.readlines())
+        print(fd.read(), end='')
