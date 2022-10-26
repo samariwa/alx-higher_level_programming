@@ -2,6 +2,7 @@
 """ This module contains a function that reads an input file and\
 prints its content to the standard output """
 
+
 def read_file(filename=""):
     """ this function opens the provided file and prints its content\
     to stdout """
