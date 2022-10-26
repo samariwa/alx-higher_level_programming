@@ -5,5 +5,5 @@ prints its content to the standard output """
 def read_file(filename=""):
     """ this function opens the provided file and prints its content\
     to stdout """
-    fd = open(filename, mode='r', encoding='UTF8')
-    print(fd.read())
+    with open(filename, mode='r', encoding='UTF8') as fd:
+        print(fd.read())
