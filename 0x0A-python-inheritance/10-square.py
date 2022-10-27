@@ -15,6 +15,8 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
+    """ This is a subclass of the base geometry class that inherits\
+    some of its attributes """
     def __init__(self, width, height):
         super().integer_validator(width, width)
         self.__width = width
@@ -32,6 +34,8 @@ class Rectangle(BaseGeometry):
 
 
 class Square(BaseGeometry):
+    """ This is a subclass of the base geometry class that inherits\
+    some of its attributes """
     def __init__(self, size):
         super().integer_validator(size, size)
         self.__size = size
