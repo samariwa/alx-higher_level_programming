@@ -102,7 +102,45 @@ class Rectangle(Base):
     def display(self):
         """ This is a public method that prints the rectangle representation\
         using the # symbol in string format """
+        for wai in range(self.__y):
+            print()
+        spaces = ''.join(' ' for ex in range(self.__x))
         for height in range(self.__height):
+            print("{}".format(spaces), end='')
             for width in range(self.__width):
                 print('#', end='')
             print()
+
+    def update(self, *args, **kwargs):
+        """ This function updates the value of the attributes using the\
+        values passed in as arguments in the specific order"""
+        if args is not None and len(args) != 0:
+            try:
+                if args[0] is not None:
+                    self.id = args[0]
+                if args[1] is not None:
+                    self.__width = args[1]
+                if args[2] is not None:
+                   self.__height = args[2]
+                if args[3] is not None:
+                   self.__x = args[3]
+                if args[4] is not None:
+                   self.__y = args[4]
+            except IndexError:
+                pass
+        elif kwargs is not None:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                if key == 'width':
+                    self.__width = value
+                if key == 'height':
+                    self._height = value
+                if key == 'x':
+                    self.__x = value
+                if key == 'y':
+                    self.__y = value
+              
+    def __str__(self):
+        """ This function returns a representation of the rectangle instance in string format """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__width, self.__height, self.__x, self.__y)
