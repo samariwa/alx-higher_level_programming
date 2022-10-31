@@ -67,4 +67,10 @@ class Square(Rectangle):
                 if key == 'x':
                     self.__x = value
                 if key == 'y':
-                    self.__y = value     
+                    self.__y = value
+
+    def to_dictionary(self):
+        """ This method returns a dictionary containing the various\
+        and values of the instance """
+        attributes = {'id': self.id, 'size': self.__width, 'x': self.__x, 'y': self.__y}
+        return attributes

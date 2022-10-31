@@ -112,7 +112,7 @@ class Rectangle(Base):
             print()
 
     def update(self, *args, **kwargs):
-        """ This function updates the value of the attributes using the\
+        """ This method updates the value of the attributes using the\
         values passed in as arguments in the specific order"""
         if args is not None and len(args) != 0:
             try:
@@ -140,7 +140,13 @@ class Rectangle(Base):
                     self.__x = value
                 if key == 'y':
                     self.__y = value
+
+    def to_dictionary(self):
+        """ This method returns a dictionary containing the various\
+        and values of the instance """
+        attributes = {'id': self.id, 'width': self.__width, 'height': self.__height, 'x': self.__x, 'y': self.__y}
+        return attributes
               
     def __str__(self):
         """ This function returns a representation of the rectangle instance in string format """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__width, self.__height, self.__x, self.__y)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)

@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """ This module comprises of various classes and methods with some\
 inheriting from others """
+import json
+
 
 class Base:
     __nb_objects = 0
@@ -15,13 +17,10 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-"""
-    @property
-    def id(self):
-        """""" This is the getter method for public atrribute id """"""
-        return self.id
-
-    @id.setter
-    def id(self, val):
-     """   """ This is the setter method for public atrribute id """"""
-        self.size = val """
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """ This is a static method that returns the JSON string\
+        representation of list_dictionaries """
+        if list_dictionaries == None:
+            return ("[]")
+        return (json.dumps(list_dictionaries))        
