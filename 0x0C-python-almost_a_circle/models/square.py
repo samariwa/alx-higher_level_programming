@@ -22,8 +22,10 @@ class Square(Rectangle):
         self.__y = y
 
     def __str__(self):
-        """ This function returns a representation of the string instance in string format """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.__x, self.__y, self.__width)
+        """ This function returns a representation of the\
+        string instance in string format """
+        return "[Square] ({}) {}/{} - {}\
+        ".format(self.id, self.__x, self.__y, self.__width)
 
     @property
     def size(self):
@@ -52,9 +54,9 @@ class Square(Rectangle):
                     self.__width = args[1]
                     self.__height = args[1]
                 if args[2] is not None:
-                   self.__x = args[3]
+                    self.__x = args[3]
                 if args[3] is not None:
-                   self.__y = args[4]
+                    self.__y = args[4]
             except IndexError:
                 pass
         elif kwargs is not None:
@@ -72,5 +74,8 @@ class Square(Rectangle):
     def to_dictionary(self):
         """ This method returns a dictionary containing the various\
         and values of the instance """
-        attributes = {'id': self.id, 'size': self.__width, 'x': self.__x, 'y': self.__y}
+        attributes = {'id': self.id,
+                      'size': self.__width,
+                      'x': self.__x,
+                      'y': self.__y}
         return attributes

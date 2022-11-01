@@ -10,8 +10,8 @@ class Rectangle(Base):
     of its attributes"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """ This is the constructor of the class Rectangle and initialization\
-	of some of its attributes is done after checkers of type and value are\
-	done """
+        of some of its attributes is done after checkers of type and value are\
+        done """
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -33,7 +33,6 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-
 
     @property
     def width(self):
@@ -121,11 +120,11 @@ class Rectangle(Base):
                 if args[1] is not None:
                     self.__width = args[1]
                 if args[2] is not None:
-                   self.__height = args[2]
+                    self.__height = args[2]
                 if args[3] is not None:
-                   self.__x = args[3]
+                    self.__x = args[3]
                 if args[4] is not None:
-                   self.__y = args[4]
+                    self.__y = args[4]
             except IndexError:
                 pass
         elif kwargs is not None:
@@ -144,9 +143,15 @@ class Rectangle(Base):
     def to_dictionary(self):
         """ This method returns a dictionary containing the various\
         and values of the instance """
-        attributes = {'id': self.id, 'width': self.__width, 'height': self.__height, 'x': self.__x, 'y': self.__y}
+        attributes = {'id': self.id,
+                      'width': self.__width,
+                      'height': self.__height,
+                      'x': self.__x,
+                      'y': self.__y}
         return attributes
-              
+
     def __str__(self):
-        """ This function returns a representation of the rectangle instance in string format """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        """ This function returns a representation of the rectangle\
+        instance in string format """
+        return "[Rectangle] ({}) {}/{} - {}/{}\
+        ".format(self.id, self.__x, self.__y, self.__width, self.__height)
