@@ -20,9 +20,9 @@ class TestBaseClass(unittest.TestCase):
         base1 = Base()
         base2 = Base(13)
         base3 = Base()
-        self.assertEqual(base.id, 1)
-        self.assertEqual(base.id, 13)
-        self.assertEqual(base.id, 2)
+        self.assertEqual(base1.id, 1)
+        self.assertEqual(base2.id, 13)
+        self.assertEqual(base3.id, 2)
 
     def test_with_excess_arguments(self):
         """ This test method checks if an exception is raised when excess\
