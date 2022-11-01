@@ -141,7 +141,7 @@ class Rectangle(Base):
                 if key == 'width':
                     self.__width = value
                 if key == 'height':
-                    self._height = value
+                    self.__height = value
                 if key == 'x':
                     self.__x = value
                 if key == 'y':
