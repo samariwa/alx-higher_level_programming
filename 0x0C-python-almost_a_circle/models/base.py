@@ -41,7 +41,7 @@ class Base:
         """ This method writes a JSON string representation to a file """
         filename = cls.__name__ + '.json'
         with open(filename, mode='w', encoding='UTF-8') as fd:
-            if list_objs is None:
+            if list_objs is None or len(list_objs) == 0:
                 fd.write('[]')
             str_content = []
             for i in list_objs:
@@ -53,10 +53,7 @@ class Base:
     def create(cls, **dictionary):
         """ This method returns an instance with all the attributes already\
         set """
-        if cls.__name__ == 'Rectangle':
-            instance = cls(1, 1, 1, 1)
-        elif cls.__name__ == 'Square':
-            instance = cls(1, 1, 1)
+        instance = cls(1, 1)
 
         instance.update(**dictionary)
         return instance
