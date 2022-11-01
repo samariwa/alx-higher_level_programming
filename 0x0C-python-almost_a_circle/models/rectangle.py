@@ -6,8 +6,8 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """ This is the subclass of superclass Base and it inherits some\
-    of its attributes"""
+    """ This is the Rectangle subclass of superclass Base and it inherits\
+    some of its attributes"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """ This is the constructor of the class Rectangle and initialization\
         of some of its attributes is done after checkers of type and value are\
@@ -29,6 +29,7 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         super().__init__(id)
+        # private instance attributes initialized
         self.__width = width
         self.__height = height
         self.__x = x
@@ -56,7 +57,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """ This is the setter of the x attribute together with value\
+        """ This is the setter of the height attribute together with value\
         type checkers """
         if type(value) is not int:
             raise TypeError("height must be an integer")
@@ -86,7 +87,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """ This is the setter of the x atrribute together with value\
+        """ This is the setter of the y atrribute together with value\
         type checkers """
         if type(value) is not int:
             raise TypeError("y must be an integer")
