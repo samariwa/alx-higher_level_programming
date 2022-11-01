@@ -54,9 +54,9 @@ class Square(Rectangle):
                     self.__width = args[1]
                     self.__height = args[1]
                 if args[2] is not None:
-                    self.__x = args[3]
+                    self.__x = args[2]
                 if args[3] is not None:
-                    self.__y = args[4]
+                    self.__y = args[3]
             except IndexError:
                 pass
         elif kwargs is not None:
