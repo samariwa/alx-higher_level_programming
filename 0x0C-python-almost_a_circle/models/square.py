@@ -16,21 +16,18 @@ class Square(Rectangle):
         if size <= 0:
             raise ValueError("width: must be > 0")
         super().__init__(size, size, x, y, id)
-        self.__width = size
-        self.__height = size
-        self.__x = x
-        self.__y = y
+        self.size = size
 
     def __str__(self):
         """ This function returns a representation of the\
         string instance in string format """
         return "[Square] ({}) {}/{} - {}\
-        ".format(self.id, self.__x, self.__y, self.__width)
+        ".format(self.id, self.x, self.y, self.width)
 
     @property
     def size(self):
         """ This is the getter of the width attribute """
-        return self.__width
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -40,8 +37,8 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
-        self.__width = value
-        self.__height = value
+        self.width = value
+        self.height = value
 
     def update(self, *args, **kwargs):
         """ This function updates the value of the attributes using the\
@@ -51,12 +48,12 @@ class Square(Rectangle):
                 if args[0] is not None:
                     self.id = args[0]
                 if args[1] is not None:
-                    self.__width = args[1]
-                    self.__height = args[1]
+                    self.width = args[1]
+                    self.height = args[1]
                 if args[2] is not None:
-                    self.__x = args[2]
+                    self.x = args[2]
                 if args[3] is not None:
-                    self.__y = args[3]
+                    self.y = args[3]
             except IndexError:
                 pass
         elif kwargs is not None:
@@ -64,18 +61,18 @@ class Square(Rectangle):
                 if key == 'id':
                     self.id = value
                 if key == 'size':
-                    self.__width = value
-                    self.__height = value
+                    self.width = value
+                    self.height = value
                 if key == 'x':
-                    self.__x = value
+                    self.x = value
                 if key == 'y':
-                    self.__y = value
+                    self.y = value
 
     def to_dictionary(self):
         """ This method returns a dictionary containing the various\
         and values of the instance """
         attributes = {'id': self.id,
-                      'size': self.__width,
-                      'x': self.__x,
-                      'y': self.__y}
+                      'size': self.width,
+                      'x': self.x,
+                      'y': self.y}
         return attributes
