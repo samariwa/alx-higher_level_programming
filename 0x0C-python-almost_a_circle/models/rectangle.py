@@ -160,5 +160,6 @@ class Rectangle(Base):
     def __str__(self):
         """ This function returns a representation of the rectangle\
         instance in string format """
-        return "[Rectangle] ({}) {}/{} - {}/{}\
-        ".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        str1 = f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
+        str2 = f"{self.__width}/{self.__height}"
+        return f"{str1} - {str2}"
