@@ -6,6 +6,8 @@ import os
 
 
 class Base:
+    """ This class is the super class that has the general methods for the\
+    various subclasses """
     __nb_objects = 0
 
     def __init__(self, id=None):

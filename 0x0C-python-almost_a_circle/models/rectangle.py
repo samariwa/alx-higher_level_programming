@@ -11,7 +11,13 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """ This is the constructor of the class Rectangle and initialization\
         of some of its attributes is done after checkers of type and value are\
-        done """
+        done 
+        Attrs:
+            width (int): The width of the rectangle
+            height (int): mathematical height
+            x (int): Location on the x axis of a 2d plane
+            y (int): Location on the y axis of a 2d plane
+	"""
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
