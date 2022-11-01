@@ -27,12 +27,12 @@ class TestRectangleClass(unittest.TestCase):
     def test_width_getter(self):
         """ This checks if the getter method for the width attribute is ok """
         rectangle = Rectangle(5, 10)
-	self.assertEqual(5, rectangle.width)
+        self.assertEqual(5, rectangle.width)
 
     def test_width_setter(self):
         """ This checks if the setter method for the width attribute is ok """
         rectangle = Rectangle(5, 10)
-	rectangle.width = 7
+        rectangle.width = 7
         self.assertEqual(7, rectangle.width)
 
     def test_height_getter(self):
@@ -71,7 +71,7 @@ class TestRectangleClass(unittest.TestCase):
     def test_zero_width(self):
         """ This test case checks if an exception is raised when 0 is set as\
         the rectangle width """
-	with self.assertRaises(ValueError, "width must be > 0"):
+        with self.assertRaises(ValueError, "width must be > 0"):
             Rectangle(0, 45)
 
     def test_negative_width(self):

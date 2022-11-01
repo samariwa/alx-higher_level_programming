@@ -11,15 +11,15 @@ class TestBaseClass(unittest.TestCase):
     def test_instantiation_with_valid_args(self):
         """ This tests for instantiation with a valid argument """
         base = Base(12)
-	self.assertEqual(base.id, 12)
+        self.assertEqual(base.id, 12)
 
     def test_instantiation_without_arg(self):
         """ This tests for instantiation without any argument\
         The number of instances initialised without an id should\
         be id assigned to that object """
-	base1 = Base()
-	base2 = Base(13)
-	base3 = Base()
+        base1 = Base()
+        base2 = Base(13)
+        base3 = Base()
         self.assertEqual(base.id, 1)
         self.assertEqual(base.id, 13)
         self.assertEqual(base.id, 2)

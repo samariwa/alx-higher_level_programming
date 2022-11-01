@@ -11,7 +11,7 @@ class TestSquareClass(unittest.TestCase):
     def test_instantiation_with_valid_args(self):
         """ This tests for instantiation with a valid argument """
         square = Square(1, 2, 3, 4)
-        self.assertEqual(square.id, 5)
+        self.assertEqual(square.id, 4)
 
     def test_instantiation_without_some_arg(self):
         """ This tests for instantiation without any argument\
@@ -27,12 +27,12 @@ class TestSquareClass(unittest.TestCase):
     def test_size_getter(self):
         """ This checks if the getter method for the size attribute is ok """
         square = Square(5)
-	self.assertEqual(5, square.size)
+        self.assertEqual(5, square.size)
 
     def test_size_setter(self):
         """ This checks if the setter method for the size attribute is ok """
         square = Square(5)
-	square.size = 7
+        square.size = 7
         self.assertEqual(7, square.size)
 
     def test_x_getter(self):
@@ -60,7 +60,7 @@ class TestSquareClass(unittest.TestCase):
     def test_zero_size(self):
         """ This test case checks if an exception is raised when 0 is set as\
         the square width """
-	with self.assertRaises(ValueError, "width must be > 0"):
+        with self.assertRaises(ValueError, "width must be > 0"):
             Square(0)
 
     def test_negative_width(self):
