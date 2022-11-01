@@ -2,6 +2,7 @@
 """ This module comprises of various classes and methods with some\
 inheriting from others """
 import json
+import os
 
 
 class Base:
@@ -63,6 +64,8 @@ class Base:
         """ This is a class method that returns the list of instances that\
         were created and saved in the json file """
         filename = cls.__name__ + '.json'
+	if os.path.isfile(filename) is False:
+            return []
         instances = []
         with open(filename, mode='r', encoding='UTF-8') as fd:
             instance_list = Base.from_json_string(fd.read())
