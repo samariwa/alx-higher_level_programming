@@ -1,0 +1,35 @@
+The 1-my_list module
+============================================
+Test for the list class and MyList subclass
+============================================
+
+This is a class that has various list manipulation methods
+among them being the append and sort methods which will be
+used in this test cases
+
+import class list creation
+----------------
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+
+Appending values to the created list
+-------------------------------------
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.append(-5)
+
+Printing list and sorted list
+-----------------------------
+>>> print(my_list)
+[1, 4, 2, 3, 5, -5]
+>>> my_list.print_sorted()
+[-5, 1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5, -5]
