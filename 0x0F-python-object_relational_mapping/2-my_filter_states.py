@@ -10,7 +10,9 @@ db = MySQLdb.connect(host='localhost' , user=username, passwd=password, db=datab
 
 cur = db.cursor()
 
-cur.execute("SELECT * FROM states")
+query = "SELECT * FROM states WHERE name = '"+sys.argv[4]+"' ORDER by id ASC"
+
+cur.execute(query)
 
 rows = cur.fetchall()
 for row in rows:

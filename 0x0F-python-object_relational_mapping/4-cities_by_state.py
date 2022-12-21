@@ -10,8 +10,10 @@ db = MySQLdb.connect(host='localhost' , user=username, passwd=password, db=datab
 
 cur = db.cursor()
 
-cur.execute("SELECT * FROM states")
+query = "SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states ON cities.state_id = states.id ORDER by cities.id ASC"
+
+cur.execute(query)
 
 rows = cur.fetchall()
 for row in rows:
-    print("({}, '{}')". format(row[0], row[1]))
+    print("({}, '{}', '{}')". format(row[0], row[1], row[2]))
