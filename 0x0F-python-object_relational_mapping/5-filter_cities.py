@@ -32,7 +32,7 @@ if __name__ == '__main__':
     if len(rows) != 0:
         last_value = rows[-1]
         for row in rows:
-            print("{}". format(row[0]), end = '')
+            print("{}". format(row[0]), end='')
             if (row != last_value):
-                print(', ', end = '')
+                print(', ', end='')
     print()
