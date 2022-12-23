@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Start link class to table in database 
+Start link class to table in database
 Usage: ./6-model_state.py <mysql username>
                                      <mysql password>
                                      <database name>
